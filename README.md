@@ -233,3 +233,16 @@ by appending your own. A few useful ones are as follow.
 # Check whether the code is compilable
 ./scripts/docker_run.sh cargo check
 ```
+
+### Deployment
+
+// lindsay.money is a host defined in ~/.ssh/config
+```
+scp ./node-template lindsay.money:/home/admin
+scp ./node.service lindsay.money:/home/admin
+ssh lindsay.money
+cd /home/admin
+sudo mv node.service /etc/systemd/system/
+sudo systemctl start node
+sudo systemctl enable node
+```

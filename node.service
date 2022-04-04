@@ -1,0 +1,14 @@
+[Unit]
+Description=Substrate Node Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=admin
+ExecStart=/bin/sh -c '/home/admin/node-template --dev --ws-external'
+
+[Install]
+WantedBy=multi-user.target
