@@ -238,7 +238,7 @@ by appending your own. A few useful ones are as follow.
 
 // lindsay.money is a host defined in ~/.ssh/config
 ```
-scp ./node-template lindsay.money:/home/admin
+scp ./target/release/node-template lindsay.money:/home/admin
 scp ./node.service lindsay.money:/home/admin
 ssh lindsay.money
 cd /home/admin
